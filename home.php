@@ -15,6 +15,14 @@
     <input type="text" name="lat" placeholder="Latitude" required value="45.191102"><br>
     <label for="top">Nombre d'AP a afficher</label>
     <input type="number" name="top" placeholder="Nombre" required value="5"><br>
+    <label for="data">Choix des donnees</label>
+    <select name="data">
+        <option value="wifi">Point d'acces WiFi</option>
+        <option value="ORA">Antennes GSM Orange</option>
+        <option value="BYG">Antennes GSM Bouygues</option>
+        <option value="SFR">Antennes GSM SFR</option>
+        <option value="FREE">Antennes GSM Free</option>
+    </select><br><br>
     <input type="submit" value="Envoyer">
 </form>
 </body>

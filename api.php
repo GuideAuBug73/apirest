@@ -11,11 +11,11 @@ if (empty($lon) or empty($lat) or empty($top) or empty($typedata)) {
 include "tp2-helpers.php";
 
 if ($typedata == 'wifi') { //Si on choisi les point d'acces wifi
-    $data = smartcurl("http://192.168.227.128/webservice.php/?lon=" . $lon . "&lat=" . $lat . "&top=" . $top, 1); //on recupere les donnees de webservices.php
+    $data = smartcurl("http://127.0.0.1/webservice.php/?lon=" . $lon . "&lat=" . $lat . "&top=" . $top, 1); //on recupere les donnees de webservices.php
     $type = "points d'acces"; //Variable pour l'affichage
     $nomOPE = ""; //Variable pour l'affichage
 } elseif ($typedata == 'ORA' or $typedata == 'BYG' or $typedata == 'SFR' or $typedata == 'FREE') { //Si on choisi les antennes GSM
-    $data = smartcurl("http://192.168.227.128/webserviceGSM.php/?lon=" . $lon . "&lat=" . $lat . "&top=" . $top . "&data=" . $typedata, 1); // on recupere les donnees de webservicesGSM.php
+    $data = smartcurl("http://127.0.0.1/webserviceGSM.php/?lon=" . $lon . "&lat=" . $lat . "&top=" . $top . "&data=" . $typedata, 1); // on recupere les donnees de webservicesGSM.php
     $type = "antennes GSM"; //Variable pour l'affichage
     if ($typedata == 'ORA') {  //Variable pour l'affichage
         $nomOPE = " d'Orange";
